@@ -1,6 +1,6 @@
 const { Sequelize, DataTypes } = require("sequelize");
 const sequelize = new Sequelize("wheel", "root", "", {
-  host: "localhost",
+  host: "192.168.33.17",
   dialect: "mysql",
 });
  sequelize
@@ -8,7 +8,7 @@ const sequelize = new Sequelize("wheel", "root", "", {
    .then((r) => console.log("connected"))
    .catch((err) => console.log(err));
 
-   sequelize.sync({ force: true })
+   sequelize.sync({ alter: true })
   .then(() => {
      console.log("Database and tables created!");
    })
