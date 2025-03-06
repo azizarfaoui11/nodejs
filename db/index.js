@@ -1,6 +1,6 @@
 const { Sequelize, DataTypes } = require("sequelize");
 const sequelize = new Sequelize("wheel", "root", "", {
-  host: "192.168.33.17",
+  host: "mysql",
   dialect: "mysql",
 });
  sequelize
